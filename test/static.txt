@@ -1,0 +1,12 @@
+Le mot-clé static te permet de n'utiliser une fonction que dans le fichier dans lequel elle est écrite (elle sera considérée comme non définie dans les autres fichiers).
+
+Ca peut être pratique si tu veux juste t'en servir pour des calculs d'autres fonctions non statiques et que tu ne veux pas "bloquer" un nom qui pourrait se retrouver dans un autre fichier (surtout si tu fais des bibliothèques).
+
+
+
+Le modificateur static a deux significations différentes selon le contexte dans lequel il agit.
+
+Sur une variable locale, il permet de définir une variable maintenue pendant toute la durée d'exécution du programme (comme les variables globales) seulement, puisqu'elle a été déclarée à l'intérieur d'une fonction, sa visibilité sera limitée au corps de cette fonction.
+Sur une variable globale, le modificateur static permet de réduire la visibilité de la variable au fichier où elle est déclarée.
+
+Associé à une fonction, ce mot-clé réduit la visibilité de cette fonction au fichier source où elle est déclarée. Une telle fonction ne pourra donc pas être utilisée depuis un autre fichier.
